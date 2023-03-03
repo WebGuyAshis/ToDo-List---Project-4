@@ -1,6 +1,12 @@
 const express = require('express');
 const app = express();
-const port = 6000; //by default browser runs on port 80;
+const port = 8000; //by default browser runs on port 80;
+
+
+// Use Router
+app.use('/', require("./routes"));
+
+
 
 app.listen(port, function(err){
     if(err){
