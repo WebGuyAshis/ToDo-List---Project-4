@@ -20,13 +20,16 @@
 <body>
     <div id="main-container">
         <div id="switch-tabs">
-            <span class="switch-btn" id="dashboard">
-                Dashboard
-            </span>
-
-            <span class="switch-btn" id="my-tasks">
-                Tasks
-            </span>
+            <a href="/dashboard">
+                <span class="switch-btn" id="dashboard">
+                    Dashboard
+                </span>
+            </a>
+            <a href="/tasks">
+                <span class="switch-btn" id="my-tasks">
+                    Tasks
+                </span>
+            </a>
         </div>
 
         <div id="tasks-body">
@@ -53,7 +56,7 @@
                 <li class="tasks">
                     <div class="check-label">
                         <div class="check-mark">
-                            
+
                         </div>
                         <div class="label-date">
                             <div class="task-label">
@@ -73,7 +76,7 @@
                 <li class="tasks">
                     <div class="check-label">
                         <div class="check-mark">
-                            
+
                         </div>
                         <div class="label-date">
                             <div class="task-label">
@@ -90,11 +93,13 @@
                     </div>
                 </li>
             </ul>
-            
+
         </div>
-        <div id="add-tasks">
-            <i class="bi bi-plus-lg"></i>
-        </div>
+        <a href="/addTask">
+            <div id="add-tasks">
+                <i class="bi bi-plus-lg"></i>
+            </div>
+        </a>
     </div>
 
     <script src="./tasks.js"></script>

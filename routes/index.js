@@ -15,4 +15,6 @@ router.use('/taskDisplay', require('./taskDisplay'))
 
 router.use('/addTask', require('./addTask'));
 
-module.exports = router
+router.use('/', require('./createTask'));
+
+module.exports = router;

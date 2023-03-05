@@ -19,12 +19,12 @@
 </head>
 
 <body>
-        <div id="add-task-container">
+        <form action="/addtodo" method="post" id="add-task-container">
             <h1>Add Task</h1>
             <div id="title-category">
                 <div id="set-title">
                     <span>Title</span>
-                    <input type="text">
+                    <input type="text" name="title">
                 </div>
 
                 <div id="set-cat">
@@ -42,7 +42,7 @@
 
             <div id="set-description">
                 <span>Description</span>
-                <textarea name="" id="task-description" cols="" rows=""></textarea>
+                <textarea name="description" id="task-description" cols="" rows=""></textarea>
             </div>
 
             <div id="setTime-date">
@@ -57,10 +57,10 @@
                 </div>
             </div>
 
-            <div id="add-task-btn">
+            <button id="add-task-btn">
                 Add Task
-            </div>
-        </div>
+            </button>
+        </form>
 </body>
 
 </html>
