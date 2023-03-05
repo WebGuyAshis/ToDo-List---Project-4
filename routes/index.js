@@ -7,6 +7,12 @@ console.log("Router Loaded.");
 
 router.get('/', homeController.home);
 
+router.use('/dashboard', require("./dashboard"));
 
+router.use('/tasks',require("./tasks"))
+
+router.use('/taskDisplay', require('./taskDisplay'))
+
+router.use('/addTask', require('./addTask'));
 
 module.exports = router

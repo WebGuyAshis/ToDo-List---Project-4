@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task</title>
+
+    <link rel="stylesheet" href="addTask.css">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+        <div id="add-task-container">
+            <h1>Add Task</h1>
+            <div id="title-category">
+                <div id="set-title">
+                    <span>Title</span>
+                    <input type="text">
+                </div>
+
+                <div id="set-cat">
+                    <span>Category</span>
+                    <select>
+                        <option value="">Meeting</option>
+                        <option value="">Work</option>
+                        <option value="">Study</option>
+                        <option value="">Play</option>
+                        <option value="">Game</option>
+                        <option value="">Event</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="set-description">
+                <span>Description</span>
+                <textarea name="" id="task-description" cols="" rows=""></textarea>
+            </div>
+
+            <div id="setTime-date">
+                <div id="set-date">
+                    <label for="myDate">Enter a date:</label>
+                    <input type="date" id="myDate" name="myDate">
+                </div>
+    
+                <div id="set-time">
+                    <label for="myTime">Enter a time:</label>
+                    <input type="time" id="myTime" name="myTime">
+                </div>
+            </div>
+
+            <div id="add-task-btn">
+                Add Task
+            </div>
+        </div>
+</body>
+
+</html>

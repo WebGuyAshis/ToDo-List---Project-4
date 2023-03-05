@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="./tasks.css">
+</head>
+
+<body>
+    <div id="main-container">
+        <div id="switch-tabs">
+            <span class="switch-btn" id="dashboard">
+                Dashboard
+            </span>
+
+            <span class="switch-btn" id="my-tasks">
+                Tasks
+            </span>
+        </div>
+
+        <div id="tasks-body">
+            <!-- Date-Day -->
+            <div id="date-day">
+                <div class="tasks-page-date">
+                    <span id="tasks-date">03</span>
+                    <span id="tasks-month">Mar,</span>
+                    <span id="tasks-year">2023</span>
+                </div>
+                <div class="tasks-day">
+                    <span id="tasks-day">
+                        <%= day%>
+                    </span>
+                </div>
+                <!-- Search Bar -->
+            </div>
+            <div id="search-box">
+                <input type="text" id="search-bar" placeholder="Search Tasks">
+                <i id="search-icon" class="bi bi-search"></i>
+            </div>
+            <!-- Tasks Container -->
+            <ul id="tasks-list">
+                <li class="tasks">
+                    <div class="check-label">
+                        <div class="check-mark">
+                            
+                        </div>
+                        <div class="label-date">
+                            <div class="task-label">
+                                Sleep
+                            </div>
+                            <div class="task-date">
+                                03 Mar,2023
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="delete-task">
+                        <i class="bi bi-trash3"></i>
+                    </div>
+                </li>
+
+                <li class="tasks">
+                    <div class="check-label">
+                        <div class="check-mark">
+                            
+                        </div>
+                        <div class="label-date">
+                            <div class="task-label">
+                                Sleep
+                            </div>
+                            <div class="task-date">
+                                03 Mar,2023
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="delete-task">
+                        <i class="bi bi-trash3"></i>
+                    </div>
+                </li>
+            </ul>
+            
+        </div>
+        <div id="add-tasks">
+            <i class="bi bi-plus-lg"></i>
+        </div>
+    </div>
+
+    <script src="./tasks.js"></script>
+</body>
+
+</html>

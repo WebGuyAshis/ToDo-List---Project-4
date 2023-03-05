@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#welcome-container{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #6dd523);
+	background-size: 400% 400%;
+	height: 100vh;
+    width: 100vw;
+    color: aliceblue;
+    animation: backgroundGradient 15s ease infinite;
+    /* transition: 0.4s; */
+}
+
+@keyframes backgroundGradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+}
+
+#welcome-text{
+    position: absolute;
+    top: 40%;
+    /* left: 50%; */
+    transform: translateY(-50%);
+    font-size: 9vw;
+    width: 100%;
+    text-align: center;
+    animation: popup 1.6s ease-in-out;
+}
+
+@keyframes popup {
+    0%{
+        font-size: 0;
+    }
+    25%{
+        font-size: 25vw;
+    }
+    50%{
+        font-size: 2vw;
+    }
+    100%{
+        font-size: 9vw;
+    }
+    
+}
+
+#continue-text{
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* Animated background */

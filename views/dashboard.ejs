@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="./dashboard.css">
+</head>
+<body>
+    <div id="dashboard-container">
+        <div id="switch-tabs">
+            <span class="switch-btn" id="dashboard">
+                Dashboard
+            </span>
+
+            <span class="switch-btn" id="my-tasks">
+                Tasks
+            </span>
+        </div>
+        <!-- For Dates -->
+        <div id="date-day">
+            <div class="tasks-page-date">
+                <span id="tasks-date">03</span>
+                <span id="tasks-month">Mar</span>
+                <span id="tasks-year">2023,</span>
+            </div>
+            <span id="tasks-day">Friday</span>
+            <!-- Search Bar -->
+        </div>
+
+        <div id="dashboard-body">
+            <!-- Greetings -->
+            <div id="greetings">
+                <div id="greet-msg">
+                    Good Evening,
+                </div>
+                <div id="user-name">
+                    Ashis!
+                </div>
+            </div>
+
+            <!-- ProgressBAr -->
+            <div id="progress-box">
+                <div id="progress-bar">
+                    <div id="completed-percent">
+
+                    </div>
+                </div>
+                <div id="progress-label">
+                    <div id="completed-bar">
+                        <span class="progress-indicator" id="completed-indicator"></span>
+                        Completed
+                    </div>
+                    <div id="pending-bar">
+                        <span class="progress-indicator" id="pending-indicator"></span>
+                        Pending
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Heading Design -->
+            <div id="todays-heading">
+                <span>Plans for today,</span>
+            </div>
+
+            <!-- Tasks Container -->
+            <ul id="dashboard-tasks">
+                <li class="dashboard-task-list">
+                    <div class="task-img">
+                        <img src="../Images/Study.png" alt="">
+                    </div>
+                    <span class="task-title">
+                        Study
+                    </span>
+                </li>
+                <li class="dashboard-task-list">
+                    <div class="task-img">
+                        <img src="../Images/Meeting.png" alt="">
+                    </div>
+                    <span class="task-title">
+                        Meeting With Client
+                    </span>
+                </li>
+                <li class="dashboard-task-list">
+                    <div class="task-img">
+                        <img src="../Images/Work.png" alt="">
+                    </div>
+                    <span class="task-title">
+                        Submitting Skill Test
+                    </span>
+                </li>
+                <li class="dashboard-task-list">
+                    <div class="task-img">
+                        <img src="../Images/toppng.cGameom-anime-character-playing-video-games-1170x1170.png" alt="">
+                    </div>
+                    <span class="task-title">
+                        Play Genshin Impact
+                    </span>
+                </li>
+            </ul>
+        </div>
+
+        
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>

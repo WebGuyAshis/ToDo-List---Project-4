@@ -3,10 +3,14 @@ const app = express();
 const port = 8000; //by default browser runs on port 80;
 
 
+app.use(express.static('./assets'));
 // Use Router
 app.use('/', require("./routes"));
 
 
+// Setting Up the View Engine
+app.set('view engine', 'ejs');
+app.set('views', './views')
 
 app.listen(port, function(err){
     if(err){

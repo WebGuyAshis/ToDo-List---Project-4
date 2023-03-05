@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Display</title>
+
+     <!-- Google fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+     <!-- Bootstrap Icons -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+ 
+
+    <link rel="stylesheet" href="taskDisplay.css">
+</head>
+<body>
+<div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div >
+    <div id="task-display-container">
+        <div id="in-progress-indicator">
+            <span id="animated-indicator"></span>
+            <span>In Progress</span>
+        </div>
+        <div id="task-display-title">
+            Soccer Match
+        </div>
+
+        <div id="task-display-time-left">
+            <h3>Time Left</h3>
+            <span id="left-hour">02 hr</span>
+            <span id="left-minute">48 min</span>
+        </div>
+
+        <div id="task-display-description-box">
+            <h3>Description</h3>
+            <p id="task-display-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, numquam.
+            </p>
+        </div>
+
+        <div id="created">
+            <h3>Created</h3>
+            <div id="created-time">
+                09:08 AM
+            </div>
+
+            <div id="created-date">
+                04 Mar,2023
+            </div>
+        </div>
+
+        <div id="task-display-btn">
+            <div class="task-display-button" id="task-display-completed">
+                Completed
+            </div>
+
+            <div class="task-display-button" id="task-display-delete">
+                Delete
+            </div>
+        </div>
+    </div>
+</body>
+</html>
