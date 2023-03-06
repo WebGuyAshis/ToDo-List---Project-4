@@ -12,7 +12,8 @@ router.post('/addtodo', function (req, res) {
         title: req.body.title,
         description: req.body.description,
         myDate: req.body.myDate,
-        myTime: req.body.myTime
+        myTime: req.body.myTime,
+        categoryChoosed: req.body.categoryChoosed
     })
         .then(newTask => {
             console.log("Successfully Created Task!", newTask);
@@ -20,7 +21,7 @@ router.post('/addtodo', function (req, res) {
         })
         .catch(err => {
             console.log("Error Creating Task!!", err);
-            res.status(500).send("Error Creating Task!!");
+            res.send("Error Creating Task!!");
         });
 });
 

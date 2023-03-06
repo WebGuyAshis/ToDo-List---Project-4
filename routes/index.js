@@ -17,4 +17,6 @@ router.use('/addTask', require('./addTask'));
 
 router.use('/', require('./createTask'));
 
+router.use('/delete-contact', require('./deleteTask'));
+
 module.exports = router;

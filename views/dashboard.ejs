@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,8 +13,9 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
-    <link rel="stylesheet" href="./dashboard.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
 </head>
+
 <body>
     <div id="dashboard-container">
         <div id="switch-tabs">
@@ -31,11 +33,19 @@
         <!-- For Dates -->
         <div id="date-day">
             <div class="tasks-page-date">
-                <span id="tasks-date">03</span>
-                <span id="tasks-month">Mar</span>
-                <span id="tasks-year">2023,</span>
+                <span id="tasks-date">
+                    <%= current_Date %>
+                </span>
+                <span id="tasks-month">
+                    <%= current_Month %>
+                </span>
+                <span id="tasks-year">
+                    <%= current_Year %>,
+                </span>
             </div>
-            <span id="tasks-day">Friday</span>
+            <span id="tasks-day">
+                <%= day %>
+            </span>
             <!-- Search Bar -->
         </div>
 
@@ -43,7 +53,7 @@
             <!-- Greetings -->
             <div id="greetings">
                 <div id="greet-msg">
-                    Good Evening,
+                    <%= greet_Msg%>,
                 </div>
                 <div id="user-name">
                     Ashis!
@@ -78,42 +88,21 @@
             <!-- Tasks Container -->
             <ul id="dashboard-tasks">
                 <li class="dashboard-task-list">
-                    <div class="task-img">
-                        <img src="../Images/Study.png" alt="">
-                    </div>
-                    <span class="task-title">
-                        Study
-                    </span>
-                </li>
-                <li class="dashboard-task-list">
-                    <div class="task-img">
-                        <img src="../Images/Meeting.png" alt="">
-                    </div>
-                    <span class="task-title">
-                        Meeting With Client
-                    </span>
-                </li>
-                <li class="dashboard-task-list">
-                    <div class="task-img">
-                        <img src="../Images/Work.png" alt="">
-                    </div>
-                    <span class="task-title">
-                        Submitting Skill Test
-                    </span>
-                </li>
-                <li class="dashboard-task-list">
-                    <div class="task-img">
-                        <img src="../Images/toppng.cGameom-anime-character-playing-video-games-1170x1170.png" alt="">
-                    </div>
-                    <span class="task-title">
-                        Play Genshin Impact
-                    </span>
+                    <a href="/taskDisplay">
+                        <div class="task-img">
+                            <img src="../images/Study.png" alt="">
+                        </div>
+                        <span class="task-title">
+                            Study
+                        </span>
+                    </a>
                 </li>
             </ul>
         </div>
 
-        
+
     </div>
     <script src="dashboard.js"></script>
 </body>
+
 </html>

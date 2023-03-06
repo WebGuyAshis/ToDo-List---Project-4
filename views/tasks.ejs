@@ -14,7 +14,7 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
-    <link rel="stylesheet" href="./tasks.css">
+    <link rel="stylesheet" href="./css/tasks.css">
 </head>
 
 <body>
@@ -36,13 +36,20 @@
             <!-- Date-Day -->
             <div id="date-day">
                 <div class="tasks-page-date">
-                    <span id="tasks-date">03</span>
-                    <span id="tasks-month">Mar,</span>
-                    <span id="tasks-year">2023</span>
+                    <span id="tasks-date">
+                        <%= todays_Date %>
+                    </span>
+                    <span id="tasks-month">
+                        <%= current_Month %>
+                            ,
+                    </span>
+                    <span id="tasks-year">
+                        <%= current_Year %>
+                    </span>
                 </div>
                 <div class="tasks-day">
                     <span id="tasks-day">
-                        <%= day%>
+                        <%= day %>
                     </span>
                 </div>
                 <!-- Search Bar -->
@@ -53,56 +60,84 @@
             </div>
             <!-- Tasks Container -->
             <ul id="tasks-list">
-                <li class="tasks">
-                    <div class="check-label">
-                        <div class="check-mark">
+                <% for(let i of Todo_list) { %>
+                    <li class="tasks">
+                        <div class="check-label">
+                            <div class="check-mark">
 
-                        </div>
-                        <div class="label-date">
-                            <div class="task-label">
-                                Sleep
                             </div>
-                            <div class="task-date">
-                                03 Mar,2023
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="delete-task">
-                        <i class="bi bi-trash3"></i>
-                    </div>
-                </li>
-
-                <li class="tasks">
-                    <div class="check-label">
-                        <div class="check-mark">
-
-                        </div>
-                        <div class="label-date">
-                            <div class="task-label">
-                                Sleep
-                            </div>
-                            <div class="task-date">
-                                03 Mar,2023
+                            <div class="label-date">
+                                <div class="task-label">
+                                    <%= i.title %>
+                                </div>
+                                <div class="task-date">
+                                    <%= i.myDate %>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="delete-task">
-                        <i class="bi bi-trash3"></i>
-                    </div>
-                </li>
+                        <div class="delete-task">
+                            <a href="/delete-contact/?id=<%= i._id%>">
+                                <i class="bi bi-trash3"></i>
+                            </a>
+                        </div>
+                    </li>
+                    <% } %>
+
             </ul>
 
         </div>
-        <a href="/addTask">
-            <div id="add-tasks">
-                <i class="bi bi-plus-lg"></i>
-            </div>
-        </a>
+        <div id="add-tasks">
+            <i class="bi bi-plus-lg"></i>
+        </div>
     </div>
+    <!-- Setting Task -->
+    <form action="/addtodo" method="post" id="add-task-container">
+        <i id="close-container" class="bi bi-x-lg"></i>
+        <h1>Add Task</h1>
+        <div id="title-category">
+            <div id="set-title">
+                <span>Title</span>
+                <input type="text" name="title">
+            </div>
 
-    <script src="./tasks.js"></script>
+            <div id="set-cat">
+                <span>Category</span>
+                <select name="categoryChoosed">
+                    <option value="Select">Select</option>
+                    <option value="Meeting">Meeting</option>
+                    <option value="Work">Work</option>
+                    <option value="Study">Study</option>
+                    <option value="Play">Play</option>
+                    <option value="Video Game">Video Game</option>
+                    <option value="Event">Event</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="set-description">
+            <span>Description</span>
+            <textarea name="description" id="task-description" cols="" rows=""></textarea>
+        </div>
+
+        <div id="setTime-date">
+            <div id="set-date">
+                <label for="myDate">Enter a date:</label>
+                <input type="date" id="myDate" name="myDate">
+            </div>
+
+            <div id="set-time">
+                <label for="myTime">Enter a time:</label>
+                <input type="time" id="myTime" name="myTime">
+            </div>
+        </div>
+
+        <button id="add-task-btn">
+            Add Task
+        </button>
+    </form>
+
+    <script src="/js/tasksList.js"></script>
 </body>
 
 </html>

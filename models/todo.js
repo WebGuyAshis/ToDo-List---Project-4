@@ -14,6 +14,9 @@ const toDoSchema = new mongoose.Schema({
     },
     myTime:{
         type:String
+    },
+    categoryChoosed:{
+        type:String
     }
 
 });

@@ -4,16 +4,19 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
-
+::-webkit-scrollbar{
+    display: none;
+}
 #main-container
 {
-    /* border: 1px solid black; */
     height: 100vh;
     width: 100vw;
     background-color: #ffcece;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: scroll;
+    transition: 1s;
 }
 /* Switch Tabs/ Dashboard/Tasks */
 #switch-tabs{
@@ -25,7 +28,6 @@
 }
 .switch-btn{
     display: inline-block;
-    /* border: 1px solid; */
     border-radius: 30px;
     text-align: center;
     font-weight: 800;
@@ -50,12 +52,9 @@
 }
 #date-day{
     display: inline-block;
-    /* border: 1px solid; */
-    /* width: auto; */
 }
 .tasks-page-date{
     font-size: 18px;
-    border: 1px solid;
 }
 .tasks-day{
     font-size: 38px;
@@ -69,7 +68,6 @@
     position: relative;
     border-radius: 50px;
     overflow: hidden;
-    border: 1px solid black;
 }
 #search-bar{
     width: 100%;
@@ -100,15 +98,12 @@
 
 /* Tasks Container */
 #tasks-list{
-    /* background-color: rgb(181, 255, 255); */
-    /* height: 100%; */
     width: 100%;
     border-radius: 10px;
     margin-top: 10px;
 }
 .tasks{
     width: 100%;
-    /* border: 1px solid black;Backi bs  */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -120,8 +115,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* width: 120px; */
-    /* border: 1px solid; */
 }
 .check-mark{
     border: 1px solid;
@@ -131,7 +124,8 @@
     margin: 0 20px;
 }
 .task-label{
-    font-size: 30px;
+    font-size: 25px;
+    color: rgb(59, 58, 58);
     font-weight: 600;
 }
 .delete-task{
@@ -155,4 +149,92 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+/* For add task */
+
+#add-task-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0vw;
+    max-width: 500px;
+    height: 0vh;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.6s;
+    /* background-color: aqua; */
+}
+
+#close-container{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+#title-category {
+    margin-top: 20px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#set-description {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+}
+
+textarea {
+    height: 100%;
+    outline: none;
+}
+
+#set-date {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+#set-time {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+#setTime-date {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+#add-task-btn {
+    margin: 25px;
+    background-color: rgb(0, 255, 170);
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    height: 40px;
+    outline: none;
+}
+
+
+.blur{
+    filter: blur(5px);
+}
+
+@media screen and (max-width:500px) {
+    #add-task-container{
+        min-width: 95vw;
+    }
 }
