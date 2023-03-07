@@ -1,3 +1,9 @@
+const today = new Date();
+// const current_time = today.getHours() + ':' + today.getMinutes();
+
+const current_time = `${today.getHours()}:${today.getMinutes()}`;
+
+
 const mongoose = require('mongoose');
 
 const toDoSchema = new mongoose.Schema({
@@ -16,9 +22,17 @@ const toDoSchema = new mongoose.Schema({
         type:String
     },
     categoryChoosed:{
-        type:String
+        type:String,
+        required: true,
+    },
+    currentTime : {
+        type: String,
+        default: current_time
+    },
+    completed : {
+        type: Boolean,
+        default: false
     }
-
 });
 
 const Todo = mongoose.model('Todo', toDoSchema);

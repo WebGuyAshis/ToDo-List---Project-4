@@ -13,10 +13,10 @@ module.exports.tasks = function(req, res) {
     .then(function(todos) {
       console.log("Tasks Loaded Successfully");
       return res.render('tasks', {
-        current_Year: `${currentYear}`,
-        todays_Date: `${date}`,
-        current_Month:`${currentMonth}`,
-        day: `${dayOfWeek}`,
+        current_Year: currentYear,
+        todays_Date: date,
+        current_Month:currentMonth,
+        day: dayOfWeek,
         Todo_list: todos,
       });
     })

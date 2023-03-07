@@ -85,9 +85,16 @@
                 <span>Plans for today,</span>
             </div>
 
+            <!-- When there is no tasks -->
+            <% if(Todo_List.length == 0) { %>
+                <div class="no_tasks">
+                    <img src="/images/sad.png" alt="">
+                    <span>No Tasks Added Yet!</span>
+                </div>
+                <% } %>            
             <!-- Tasks Container -->
             <ul id="dashboard-tasks">
-                <li class="dashboard-task-list">
+                <!-- <li class="dashboard-task-list">
                     <a href="/taskDisplay">
                         <div class="task-img">
                             <img src="../images/Study.png" alt="">
@@ -96,13 +103,37 @@
                             Study
                         </span>
                     </a>
-                </li>
+                </li> -->
+                <% let count = 0 %>
+                <% for(let i of Todo_List) { %>
+                    <% if(i.completed == false) { %>
+                        <li class="dashboard-task-list">
+                            <a href="/taskDisplay">
+                                <div class="task-img">
+                                    <img src="../images/Study.png" alt="">
+                                </div>
+                                <span class="task-title">
+                                    <%= i.title %>
+                                </span>
+                            </a>
+                        </li>
+                        <% } else {%>
+                            <% count = count + 1 %>
+                        <%}%>
+                            <% } %>
             </ul>
+            <% if((Todo_List.length == count) && Todo_List.length != 0) {%>
+                            <!-- When All Tasks are Completed -->
+                <div class="no_tasks">
+                    <img src="/images/party.png" alt="">
+                    <span>Great job on finishing all your tasks!</span>
+                </div>
+            <%}%>
         </div>
 
 
     </div>
-    <script src="dashboard.js"></script>
+    <!-- <script src="dashboard.js"></script> -->
 </body>
 
 </html>

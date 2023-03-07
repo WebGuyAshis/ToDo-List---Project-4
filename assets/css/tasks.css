@@ -41,6 +41,7 @@
     line-height: 30px;
     background-color: rgb(255, 44, 111);
     color: aliceblue;
+    /* border: 1px solid; */
 }
 
 /* Tasks Body */
@@ -109,12 +110,14 @@
     align-items: center;
     margin:10px auto;
     border-radius: 8px;
-    background-color: #fffdfd;
+    background-color: #fffdfd;    border: 1px solid;
+
 }
 .check-label{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 .check-mark{
     border: 1px solid;
@@ -127,12 +130,17 @@
     font-size: 25px;
     color: rgb(59, 58, 58);
     font-weight: 600;
+
 }
 .delete-task{
-    /* background-color: #ffa8a8; */
-    width: 40px;
+    width: 130px;
     font-size: 23px;
-    color: rgb(199, 11, 11);
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+.delete-task a{
+    color: rgb(177, 15, 15);
 }
 
 /* Floating add Button */
@@ -226,6 +234,7 @@ textarea {
     border-radius: 40px;
     height: 40px;
     outline: none;
+    border: none;
 }
 
 
