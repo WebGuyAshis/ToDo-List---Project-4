@@ -35,7 +35,7 @@
     font-size: 9vw;
     width: 100%;
     text-align: center;
-    animation: popup 1.6s ease-in-out;
+    animation: popup 2s ease-in-out;
 }
 
 @keyframes popup {
@@ -43,15 +43,14 @@
         font-size: 0;
     }
     25%{
-        font-size: 25vw;
+        font-size: 20vw;
     }
     50%{
         font-size: 2vw;
     }
     100%{
         font-size: 9vw;
-    }
-    
+    }    
 }
 
 #continue-text{

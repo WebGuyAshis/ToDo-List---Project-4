@@ -61,40 +61,53 @@
             </div>
 
             <!-- ProgressBAr -->
-            <div id="progress-box">
-                <div id="progress-bar">
-                    <div id="completed-percent">
+            <% let counter=0 %>
+                <% let total=0 %>
+                    <% for(let i of Todo_List) { %>
+                        <% total=total + 1 %>
+                            <% if(i.completed==true) { %>
+                                <% counter=counter + 1 %>
+                                    <% } %>
+                                        <% } %>
+                                            <div id="progress-box" data-count=<%=counter %> data-total = <%= total %>>
+                                                    <div id="progress-bar">
+                                                        <div id="completed-percent">
 
-                    </div>
-                </div>
-                <div id="progress-label">
-                    <div id="completed-bar">
-                        <span class="progress-indicator" id="completed-indicator"></span>
-                        Completed
-                    </div>
-                    <div id="pending-bar">
-                        <span class="progress-indicator" id="pending-indicator"></span>
-                        Pending
-                    </div>
-                </div>
-            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="progress-label">
+                                                        <div id="completed-bar">
+                                                            <span class="progress-indicator"
+                                                                id="completed-indicator"></span>
+                                                            Completed(
+                                                            <span id="completed-num"></span>)
+                                                        </div>
+                                                        <div id="pending-bar">
+                                                            <span class="progress-indicator"
+                                                                id="pending-indicator"></span>
+                                                            Pending
+                                                            (<span id="pending-num"></span>)
+                                                        </div>
+                                                    </div>
+                                            </div>
 
 
-            <!-- Heading Design -->
-            <div id="todays-heading">
-                <span>Plans for today,</span>
-            </div>
+                                            <!-- Heading Design -->
+                                            <div id="todays-heading">
+                                                <span>Plans for today,</span>
+                                            </div>
 
-            <!-- When there is no tasks -->
-            <% if(Todo_List.length == 0) { %>
-                <div class="no_tasks">
-                    <img src="/images/sad.png" alt="">
-                    <span>No Tasks Added Yet!</span>
-                </div>
-                <% } %>            
-            <!-- Tasks Container -->
-            <ul id="dashboard-tasks">
-                <!-- <li class="dashboard-task-list">
+                                            <!-- When there is no tasks -->
+                                            <% if(Todo_List.length==0) { %>
+                                                <div class="no_tasks">
+                                                    <img src="/images/sad.png" alt="">
+                                                    <span>No Tasks Added Yet!</span>
+                                                </div>
+                                                <% } %>
+                                                    <!-- Tasks Container -->
+                                                    <% let count=0 %>
+                                                        <ul id="dashboard-tasks">
+                                                            <!-- <li class="dashboard-task-list">
                     <a href="/taskDisplay">
                         <div class="task-img">
                             <img src="../images/Study.png" alt="">
@@ -104,36 +117,38 @@
                         </span>
                     </a>
                 </li> -->
-                <% let count = 0 %>
-                <% for(let i of Todo_List) { %>
-                    <% if(i.completed == false) { %>
-                        <li class="dashboard-task-list">
-                            <a href="/taskDisplay">
-                                <div class="task-img">
-                                    <img src="../images/Study.png" alt="">
-                                </div>
-                                <span class="task-title">
-                                    <%= i.title %>
-                                </span>
-                            </a>
-                        </li>
-                        <% } else {%>
-                            <% count = count + 1 %>
-                        <%}%>
-                            <% } %>
-            </ul>
-            <% if((Todo_List.length == count) && Todo_List.length != 0) {%>
-                            <!-- When All Tasks are Completed -->
-                <div class="no_tasks">
-                    <img src="/images/party.png" alt="">
-                    <span>Great job on finishing all your tasks!</span>
-                </div>
-            <%}%>
+
+                                                            <% for(let i of Todo_List) { %>
+                                                                <% if(i.completed==false) { %>
+                                                                        <li class="dashboard-task-list">
+                                                                            <div id="in-progress-indicator">
+                                                                                <span id="animated-indicator"></span>
+                                                                                <span>In Progress</span>
+                                                                            </div>
+                                                                            <span class="task-title">
+                                                                                <a href="/tasks"><%= i.title %></a>
+                                                                            </span>
+                                                                            <span>Created: <%= i.myDate %></span>
+                                                                            <span>Time: <%= i.myTime %></span>
+                                                                        </li>
+                                                                    <% } else {%>
+                                                                        <% count=count + 1 %>
+                                                                            <%}%>
+                                                                                <% } %>
+                                                        </ul>
+                                                        <% if((Todo_List.length==count) && Todo_List.length !=0) {%>
+                                                            <!-- When All Tasks are Completed -->
+                                                            <div class="no_tasks">
+                                                                <img src="/images/party.png" alt="">
+                                                                <span>Great job on finishing all your tasks!</span>
+                                                            </div>
+                                                            <%}%>
         </div>
 
 
     </div>
-    <!-- <script src="dashboard.js"></script> -->
+
+    <script src="./js/dashboard.js"></script>
 </body>
 
 </html>

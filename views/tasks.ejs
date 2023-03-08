@@ -55,38 +55,75 @@
                 <!-- Search Bar -->
             </div>
             <div id="search-box">
-                <input type="text" id="search-bar" placeholder="Search Tasks">
+                <input type="text" id="search-bar" placeholder="Feature Coming Soon">
                 <i id="search-icon" class="bi bi-search"></i>
             </div>
             <!-- Tasks Container -->
-            <ul id="tasks-list">
+            <ul class="tasks-list">
+                <span>Pending</span>
                 <% for(let i of Todo_list) { %>
-                    <li class="tasks">
-                        <div class="check-label">
-                            <div class="check-mark" id="completed">
-
-                            </div>
-                            <div class="label-date">
-                                <div class="task-label">
-                                    <%= i.title %>
+                    <% if(i.completed==false) { %>
+                        <li class="tasks">
+                            <div class="check-label">
+                                <div class="check-mark">
+                                    <input data-id="<%= i._id%>" id="completed" type="checkbox" name="completed" <% if
+                                        (i.completed) { %>checked<% } %>>
                                 </div>
-                                <div class="task-date">
-                                    <%= i.myDate %>
+                                <div class="label-date">
+                                    <div class="task-label">
+                                        <%= i.title %>
+                                    </div>
+                                    <div class="task-date">
+                                        <%= i.myDate %>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                            <div class="delete-task">
+                                <span id="category">
+                                    <%= i.categoryChoosed%>
+                                </span>
+                                <a href="/delete-contact/?id=<%= i._id%>">
+                                    <i class="bi bi-trash3"></i>
+                                </a>
+                            </div>
+                        </li>
+
+                        <% } %>
+                            <% } %>
+            </ul>
+
+            <ul class="tasks-list">
+                <span>Completed</span>
+                <% for(let i of Todo_list) { %>
+                    <% if( i.completed==true) {%>
+                        <li class="tasks">
+                            <div class="check-label">
+                                <div class="check-mark">
+                                    <input data-id="<%= i._id%>" id="completed" type="checkbox" name="completed" <% if
+                                        (i.completed) { %>checked<% } %>>
+                                </div>
+                                <div class="label-date">
+                                    <div class="task-label">
+                                        <%= i.title %>
+                                    </div>
+                                    <div class="task-date">
+                                        <%= i.myDate %>
+                                    </div>
+                                </div>
+                            </div>
 
 
-                        <div class="delete-task">
-                            <span id="category">
-                                <%= i.categoryChoosed%>
-                            </span>
-                            <a href="/delete-contact/?id=<%= i._id%>">
-                                <i class="bi bi-trash3"></i>
-                            </a>
-                        </div>
-                    </li>
-                    <% } %>
+                            <div class="delete-task">
+                                <span id="category">
+                                    <%= i.categoryChoosed%>
+                                </span>
+                                <a href="/delete-contact/?id=<%= i._id%>">
+                                    <i class="bi bi-trash3"></i>
+                                </a>
+                            </div>
+                        </li>
+                        <% } %>
+                            <% } %>
 
             </ul>
 

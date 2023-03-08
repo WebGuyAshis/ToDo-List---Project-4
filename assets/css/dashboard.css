@@ -119,9 +119,10 @@ body{
 }
 
 #completed-percent{
-    width: 60%;
+    width: 0;
     height: 100%;
     background-color: rgb(112, 255, 51);
+    transition: 1s;
 }
 
 
@@ -210,16 +211,24 @@ body{
 }
 .dashboard-task-list{
     /* border: 1px solid black; */
-    width: 48%;
+    width: 0%;
     min-width: 40%;
     /* max-width: 50%; */
-    height: 250px;
+    height: 0px;
     border-radius: 8px;
     background-color: #ffb58d;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    transition: 0.4s;
+    overflow: hidden;
+}
+
+.dashboard-task-list a{
+    text-decoration: none;
+    color: white;
+
 }
 
 .dashboard-task-list:nth-child(2n){
@@ -233,31 +242,46 @@ body{
     background-color: rgb(191,220,196);
 }
 
-.task-img{
-    width: 180px;
-    height: 180px;
-    overflow: hidden;
-    object-fit: contain;
-    border-radius: 8px;
-}
-
-.task-img img{
-    width: 180px;
-    height: 180px;
-    opacity: 0.2;
-}
-
 .task-title{
     /* border: 1px solid; */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    color: white;
     text-align: center;
     width: 80%;
     font-size: 3vw;
     font-weight: 600;
+}
+
+/* In Progress indicator */
+#in-progress-indicator{
+    position: absolute;
+    top: 10px;
+    width: 95%;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+#animated-indicator{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    border-radius: 50%;
+    margin: 0 10px;
+    border: 1px solid rgb(255, 255, 255);
+    animation: blink 1s infinite;
+}
+
+@keyframes blink{
+    0%,100%{
+        background-color: green;
+    }
+    50%{
+        background: transparent;
+    }
 }
 
 

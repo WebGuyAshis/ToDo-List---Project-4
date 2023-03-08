@@ -1,8 +1,6 @@
 const today = new Date();
-// const current_time = today.getHours() + ':' + today.getMinutes();
 
-const current_time = `${today.getHours()}:${today.getMinutes()}`;
-
+const current_time = today.getHours() + ':' + today.getMinutes();
 
 const mongoose = require('mongoose');
 
@@ -19,7 +17,8 @@ const toDoSchema = new mongoose.Schema({
         required: true,
     },
     myTime:{
-        type:String
+        type:String,
+        default: current_time
     },
     categoryChoosed:{
         type:String,
