@@ -12,7 +12,6 @@
     width: 100vw;
     color: aliceblue;
     animation: backgroundGradient 15s ease infinite;
-    /* transition: 0.4s; */
 }
 
 @keyframes backgroundGradient {
@@ -30,9 +29,8 @@
 #welcome-text{
     position: absolute;
     top: 40%;
-    /* left: 50%; */
     transform: translateY(-50%);
-    font-size: 9vw;
+    font-size: 8vw;
     width: 100%;
     text-align: center;
     animation: popup 2s ease-in-out;
@@ -43,13 +41,13 @@
         font-size: 0;
     }
     25%{
-        font-size: 20vw;
+        font-size: 25vw;
     }
     50%{
         font-size: 2vw;
     }
     100%{
-        font-size: 9vw;
+        font-size: 8vw;
     }    
 }
 
@@ -59,6 +57,3 @@
     width: 100%;
     text-align: center;
 }
-
-
-/* Animated background */

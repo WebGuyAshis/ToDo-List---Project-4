@@ -24,21 +24,18 @@ if(Number(hours) >11 && Number(hours) <=15){
 
 module.exports.dashBoard = function(req,res){
     Todo.find({})
-        .then(function(todos){
-            return res.render('dashboard',{
-                title: "DashBoard",
-                current_Date: date,
-                current_Month: currentMonth,
-                current_Year: currentYear,
-                day: dayOfWeek,
-                greet_Msg: greet,
-                Todo_List: todos
-            });
-        })
-        .catch(function(err){
-            console.log("Error in fetching Data")
+    .then(function(todos){
+        return res.render('dashboard',{
+            title: "DashBoard",
+            current_Date: date,
+            current_Month: currentMonth,
+            current_Year: currentYear,
+            day: dayOfWeek,
+            greet_Msg: greet,
+            Todo_List: todos
         });
+    })
+    .catch(function(err){
+        console.log("Error in fetching Data")
+    });
 }
-
-
-console.log("Users is Loaded Successfully")

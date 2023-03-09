@@ -16,8 +16,6 @@ body{
 
 #dashboard-container
 {
-    /* border: 1px solid black; */
-    /* height: 100vh; */
     width: 100vw;
     background-color: #ffffff;
     display: flex;
@@ -26,7 +24,6 @@ body{
 }
 /* Switch Tabs/ Dashboard/Tasks */
 #switch-tabs{
-    /* background-color: aliceblue; */
     margin-top: 8px;
     width: 220px;
     display: flex;
@@ -34,7 +31,6 @@ body{
 }
 .switch-btn{
     display: inline-block;
-    /* border: 1px solid; */
     border-radius: 30px;
     text-align: center;
     font-weight: 800;
@@ -49,7 +45,6 @@ body{
 #my-tasks{
     width: 80px;
     line-height: 30px;
-    /* color: aliceblue; */
 }
 #dashboard-body{
     background-color: #90d6ff;
@@ -60,22 +55,15 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
 }
 
 /* Date-day */
 #date-day{
-    /* display: inline-block; */
-    /* border: 1px solid; */
-
     width: 95%;
     margin-top: 10px;
-    /* margin-left:10px ; */
-    /* width: auto; */
 }
 .tasks-page-date{
     font-size: 45px;
-    /* border: 1px solid; */
     display: inline-block;
 
 }
@@ -86,9 +74,7 @@ body{
 
 /* Greetings */
 #greetings{
-    /* border: 1px solid; */
     width: 95%;
-    /* margin-left:10px ; */
 }
 
 #greet-msg{
@@ -100,17 +86,14 @@ body{
 
 /* ProgressBar */
 #progress-box{
-    /* border: 1px solid black; */
     width: 95%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10px 0;
-    /* justify-content: center; */
 }
 
 #progress-bar{
-    /* border: 1px solid red; */
     width: 100%;
     height: 50px;
     border-radius: 8px;
@@ -128,29 +111,24 @@ body{
 
 #progress-label{
     margin: 10px 0;
-    /* border: 1px solid green; */
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 #completed-bar{
-    /* border: 1px solid; */
     display: flex;
     align-items: center;
 }
 #pending-bar{
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
 }
 .progress-indicator{
     display: inline-block;
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    /* display: flex; */
-    /* background-color: blue; */
     margin: 0 5px;
 }
 #completed-indicator{
@@ -163,7 +141,6 @@ body{
 
 /* Heding  */
 #todays-heading{
-    /* border: 1px solid; */
     width: 95%;
     font-size: 50px;
 }
@@ -175,7 +152,6 @@ body{
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
 }
 .no_tasks span{
@@ -183,10 +159,6 @@ body{
     z-index: 10;
     display: inline-block;
     width: 100%;
-    /* position: absolute;
-    top: 50%;
-    transform: translateY(-50%); */
-    text-align: center;
     font-size: 5vw;
     color: rgb(71, 71, 71);
 }
@@ -200,20 +172,16 @@ body{
 /* Dashboard Tasks List */
 #dashboard-tasks{
     margin: 10px 0;
-    /* border: 1px solid red; */
     list-style: none;
     width: 95%;
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-; */
     justify-content: space-between;
     gap: 3vw;
 }
 .dashboard-task-list{
-    /* border: 1px solid black; */
     width: 0%;
     min-width: 40%;
-    /* max-width: 50%; */
     height: 0px;
     border-radius: 8px;
     background-color: #ffb58d;
@@ -243,7 +211,6 @@ body{
 }
 
 .task-title{
-    /* border: 1px solid; */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -252,6 +219,14 @@ body{
     width: 80%;
     font-size: 3vw;
     font-weight: 600;
+}
+
+.created_Date{
+    margin: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 10px;
 }
 
 /* In Progress indicator */

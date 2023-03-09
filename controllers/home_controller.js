@@ -4,7 +4,7 @@ const dayOfWeek = days[today.getDay()];
 
 let greetMsg;
 if(dayOfWeek == "Sunday"){
-    greetMsg = 'Its "Lazy Sunday"! Take a break and relax before the week starts again.';
+    greetMsg = 'Its "Lazy Sunday"! Take a break and relax!';
 }else if(dayOfWeek == "Monday"){
     greetMsg = "Enjoy your Monday and start the week off strong";
 }else if(dayOfWeek == "Tuesday"){
@@ -12,11 +12,11 @@ if(dayOfWeek == "Sunday"){
 }else if(dayOfWeek == "Wednesday"){
     greetMsg = "Wishing you a productive Wednesday!";
 }else if(dayOfWeek == "Thursday"){
-    greetMsg = 'Have a "Thrilling Thursday" and seek out some excitement and adventure.';
+    greetMsg = 'Have a Thrilling Thursday!';
 }else if(dayOfWeek == "Friday"){
     greetMsg = "Happy Friday! Have a great weekend ahead";
 }else{
-    greetMsg = 'Have a "Social Saturday" and catch up with friends and family.';
+    greetMsg = 'Have a Social Saturday!';
 }
 
 module.exports.home = function(req,res){
@@ -24,5 +24,3 @@ module.exports.home = function(req,res){
         title:greetMsg
     })
 }
-
-console.log("Home Controller Loaded");
