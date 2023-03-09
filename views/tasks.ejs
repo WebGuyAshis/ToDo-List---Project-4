@@ -37,19 +37,18 @@
             <div id="date-day">
                 <div class="tasks-page-date">
                     <span id="tasks-date">
-                        <%= todays_Date %>
+                        
                     </span>
                     <span id="tasks-month">
-                        <%= current_Month %>
-                            ,
+                        
                     </span>
                     <span id="tasks-year">
-                        <%= current_Year %>
+
                     </span>
                 </div>
                 <div class="tasks-day">
                     <span id="tasks-day">
-                        <%= day %>
+
                     </span>
                 </div>
                 <!-- Search Bar -->
@@ -63,7 +62,7 @@
                 <span>Pending</span>
                 <% for(let i of Todo_list) { %>
                     <% if(i.completed==false) { %>
-                        <li class="tasks">
+                        <li class="tasks" id="pending-tasks">
                             <div class="check-label">
                                 <div class="check-mark">
                                     <input data-id="<%= i._id%>" id="completed" type="checkbox" name="completed" <% if
@@ -96,7 +95,7 @@
                 <span>Completed</span>
                 <% for(let i of Todo_list) { %>
                     <% if( i.completed==true) {%>
-                        <li class="tasks">
+                        <li class="tasks" id="completed-tasks">
                             <div class="check-label">
                                 <div class="check-mark">
                                     <input data-id="<%= i._id%>" id="completed" type="checkbox" name="completed" <% if
@@ -145,13 +144,14 @@
             <div id="set-cat">
                 <span>Category</span>
                 <select name="categoryChoosed">
-                    <option value="Select">Select</option>
+                    <option value="Personal">Personal</option>
                     <option value="Meeting">Meeting</option>
                     <option value="Work">Work</option>
                     <option value="Study">Study</option>
-                    <option value="Play">Play</option>
                     <option value="Video Game">Video Game</option>
                     <option value="Event">Event</option>
+                    <option value="Birthday">Birthday</option>
+                    
                 </select>
             </div>
         </div>

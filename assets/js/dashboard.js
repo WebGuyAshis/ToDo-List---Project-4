@@ -18,3 +18,34 @@ window.onload = function() {
       dashboardTaskList[i].style.height = "250px";
     }
   };
+
+
+const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const months = ['Jan', 'Feb','Mar', 'Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+const today = new Date();
+const dayOfWeek = days[today.getDay()];
+const date = today.getDate();
+const currentMonth = months[today.getMonth()];
+const currentYear = today.getFullYear();
+
+const hours = today.getHours();
+const seconds = today.getSeconds();
+
+let greet;
+if(Number(hours) >11 && Number(hours) <=15){
+    greet = "Good Afternoon,"
+}else if(Number(hours) > 15 && Number(hours) <=23){
+    greet = "Good Evening,"
+}else if(Number(hours)>=4 && Number(hours)<12){
+    greet = "Good Morning,"
+}else{
+    greet = "Rest for a while,"
+}
+
+document.getElementById("tasks-date").innerText = date;
+document.getElementById("tasks-month").innerText = currentMonth;
+document.getElementById("tasks-year").innerText = currentYear;
+document.getElementById("tasks-day").innerText = dayOfWeek;
+
+document.getElementById("greet-msg").innerText = greet;

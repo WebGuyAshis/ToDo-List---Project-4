@@ -16,7 +16,7 @@
     flex-direction: column;
     align-items: center;
     overflow: scroll;
-    transition: 1s;
+    transition: 0.5s;
 }
 /* Switch Tabs/ Dashboard/Tasks */
 #switch-tabs{
@@ -116,12 +116,13 @@
     border-radius: 8px;
     background-color: #fffdfd;
     transition: 0.6s;
-
+    overflow: hidden;
 }
 .check-label{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 15px;
 }
 .check-mark{
     width: 18px;
@@ -133,7 +134,7 @@
     width: 100%;
 }
 .task-label{
-    font-size: 25px;
+    font-size: 22px;
     color: rgb(59, 58, 58);
     font-weight: 600;
 }
@@ -184,7 +185,7 @@
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-    transition: 1s;
+    transition: 0.6s;
 }
 
 #close-container{
