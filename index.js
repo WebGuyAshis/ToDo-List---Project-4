@@ -1,10 +1,11 @@
 const express = require('express');
 const app = express();
 const port = 8000; //by default browser runs on port 80;
+const env = require('dotenv').config();
 
 const db = require('./config/mongoose');
 
-app.use(express.urlencoded()); 1
+app.use(express.urlencoded());
 app.use(express.static('./assets'));
 // Use Router
 app.use('/', require("./routes"));
