@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.sir);
-
+mongoose.connect(process.env.mongooseUrl);
 const db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'Error Connecting to Database!'));
@@ -11,3 +10,4 @@ db.once('open', function() {
 });
 
 module.exports = db;
+
