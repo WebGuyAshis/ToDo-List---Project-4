@@ -45,7 +45,7 @@
 /* Tasks Body */
 #tasks-body{
     height:100%;
-    width: 95vw;
+    width: 80vw;
     border-radius: 10px;
 }
 #date-day{
@@ -295,6 +295,9 @@ textarea {
 }
 
 @media screen and (max-width:500px) {
+    #tasks-body{
+        width: 95vw;
+        }
     #add-task-container{
         min-width: 95vw;
     }

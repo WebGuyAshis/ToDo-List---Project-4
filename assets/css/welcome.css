@@ -33,22 +33,17 @@
     font-size: 8vw;
     width: 100%;
     text-align: center;
-    animation: popup 2s ease-in-out;
+    animation: popup 3s forwards;
+    opacity: 0;
 }
 
 @keyframes popup {
-    0%{
-        font-size: 0;
-    }
-    25%{
-        font-size: 25vw;
-    }
-    50%{
-        font-size: 2vw;
-    }
-    100%{
-        font-size: 8vw;
-    }    
+   from{
+    opacity: 0;
+   }
+   to{
+    opacity: 1;
+   } 
 }
 
 #continue-text{
